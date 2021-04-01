@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+}
+a {
+    color: chocolate;
+}
+p {
+    font-weight: bold;
+}
+ul {
+    background: rgb(99, 182, 67);
+}
+.list-item {
+    color: ivory;
+    font-size: 24px;
+}
+.active{
+    color: gold;
+}
+#top {
+    background-color: gainsboro;
+}
