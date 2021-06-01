@@ -1,22 +1,108 @@
+/* global styles */
 * {
     margin: 0;
 }
-a {
-    color: chocolate;
+body {
+    padding: 100px 50px;
+    font-size: 16px;
 }
-p {
-    font-weight: bold;
+h2 {
+    font-size: 2.5em;
 }
-ul {
-    background: rgb(99, 182, 67);
+
+/* .box */
+.box {
+    display: flex;
+    font-size: 20px;
 }
-.list-item {
-    color: ivory;
-    font-size: 24px;
+.box-item:nth-child(odd) {
+    width: 250px;
+    height: 200px;
+    background: coral;
+    border: 1px solid #fff;
 }
-.active{
-    color: gold;
+.box-item:nth-child(even) {
+    width: 250px;
+    height: 200px;
+    background: darkgreen;
+    border: 1px solid #fff;
 }
-#top {
-    background-color: gainsboro;
+.box-item:nth-child(4n) {
+    background: darkmagenta;
+}
+.box-item:nth-child(-n+3) {
+    height: 400px;
+    background: deepskyblue;
+}
+.box-item:nth-child(7) {
+    height: 100px;
+    background: gold;
+}
+.box-item:first-child {
+    height: 200px;
+    background: indigo;
+    transform: rotate(9deg);
+}
+.box-item:last-child {
+    height: 200px;
+    background: khaki;
+    transform: rotate(-9deg);
+}
+div:only-child {
+    height: 50px;
+    width: 50px;
+    background: #000;
+}
+div:empty {
+    box-shadow: 5px 5px 30px #000;
+}
+
+/* .image-1 */
+.image-1 {
+    width: 100%;
+    height: 700px;
+    /* background-image: url(../img/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed; */
+    background: url(../img/pole-zelen-trava-dom-derevya.jpg) center / 700px no-repeat,
+                url(../img/grass-png-images-pictures-transparent-28.png) bottom left;
+    background-color: rgb(4, 99, 4);
+   
+}
+.image-2 {
+    width: 100%;
+    height: 700px;
+    background-image: url(../img/50569ac974c29121ff9075e45a334942.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.image-1::before {
+    /* content: ''; */
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 0, 223, 0.808);
+    opacity: 0;
+    transition: .5s;
+}
+.image-1:hover::before {
+    opacity: 1;
+}
+.image-1 + h2 {
+    font-size: 4em;
+}
+h2::selection {
+    color: royalblue;
+    background: yellow;
+}
+p::first-letter {
+    font-size: 56px;
+}
+p::first-line {
+    font-style: italic;
 }
